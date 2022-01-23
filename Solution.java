@@ -6,13 +6,16 @@ public class Solution
 	{
 		TreeNode root = new TreeNode();
 		TreeNode left = new TreeNode();
-		left.val = 1;
 		TreeNode right = new TreeNode();
+		TreeNode left2 = new TreeNode();
+		TreeNode right2 = new TreeNode();
+		left.val = 1;
+		
 		right.val = 10;
 		root.val = 6;
-		TreeNode left2 = new TreeNode();
+		
 		left2.val = 4;
-		TreeNode right2 = new TreeNode();
+		
 		right2.val = 7;
 		left.right = left2;
 		right.left = right2;
