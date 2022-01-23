@@ -147,6 +147,7 @@ public class Solution
 			{
 				stack.push(root);
 
+				// push right node to stack first 
 				if(root.right != null)
 				{
 					stack.push(root.right);
