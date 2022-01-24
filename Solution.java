@@ -167,6 +167,36 @@ public class Solution
 	{
 		
 	}
+	
+	public boolean isValidBST(TreeNode root) {
+        
+		Stack<TreeNode> stack = new Stack<TreeNode>();		
+		int previous = Integer.MIN_VALUE;
+		bool start = false;
+        
+		while(!stack.empty() || root != null)
+		{
+			while(root != null)
+			{
+				stack.push(root);
+				root = root.left;
+			}
+			
+			root = stack.pop();
+			if(previous == Integer.MIN_VALUE && !start|| root.val > previous)
+			{
+				previous = root.val;
+				start = true;
+			}
+				
+			else
+				return false;
+			root = root.right;
+		}
+        
+        return true;
+		
+    }
 }
 
 
